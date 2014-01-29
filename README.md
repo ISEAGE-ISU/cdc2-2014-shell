@@ -1,4 +1,4 @@
-isucdc2-shell
+Shell Web
 =============
 
 The Shell's Webapp(s)
