@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Developer Blog</title>
+</head>
+<body>
+    <h1>Developer Blog!</h1>
+    {% for post in blog_data %}
+        <div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.data }}</p>
+            <p>{{ post.date }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
