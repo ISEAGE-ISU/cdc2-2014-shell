@@ -1,0 +1,11 @@
+.title
+{
+    text-align:center;
+    border-bottom: 5px solid #808080;
+}
+
+div.post_container
+{
+    border:2px solid;
+    border-radius:25px;
+}

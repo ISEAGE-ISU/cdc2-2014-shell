@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from Primary.views import blog
+from Blog.views import Post_View
 from django.contrib import admin
 admin.autodiscover()
 
@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', blog, name=blog )
+    url(r'^$', Post_View, name="blog" )
 )
