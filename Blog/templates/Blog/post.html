@@ -1,0 +1,14 @@
+{% extends "Blog/common_head.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <h1>test</h1>
+    {% for p in post %}
+    <div class="">
+            <h1 class="post_title">{{ p.title }}</h1>
+            <p>{{ p.data }}</p>
+            <p>{{ p.date }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

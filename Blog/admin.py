@@ -3,6 +3,6 @@ from Blog.models import Post
 
 # Register your models here.
 class postAdmin(admin.ModelAdmin):
-    search_fields = ["title"]
+    list_display = ('title', 'date')
 
 admin.site.register(Post, postAdmin)
