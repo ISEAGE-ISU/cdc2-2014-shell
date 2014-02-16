@@ -1,0 +1,42 @@
+{% load static %}
+
+<html>
+<head>
+<link href="{% static "Home/home.css" %}" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function overlay_on() {
+
+   var overlay = document.createElement("div");
+   overlay.setAttribute("id","overlay");
+   overlay.setAttribute("class", "overlay");
+
+   var text = document.createElement("H1");
+   var text2 = document.createTextNode("This page has been removed");
+   text.setAttribute("style", "color:red");
+   text.appendChild(text2);
+   overlay.appendChild(text);
+   document.body.appendChild(overlay);
+}
+
+function overlay_off() {
+   document.body.removeChild(document.getElementById("overlay"));
+}
+</script>
+</head>
+<body>
+    <h1>DB Debugging</h1>
+    {% for c in client %}
+    <div class="">
+            <p>Name: {{ c.client_name }}</p>
+            <p>Payment: {{ c.ach_payment_info }}</p>
+            <p>SiteName: {{ c.site_name }}</p>
+            <p>uName: {{ c.account_uname }}</p>
+            <p>Password: {{ c.account_password }}</p>
+    </div>
+    {% endfor %}
+
+
+<script type="text/javascript">
+    window.onload = overlay_on;
+</script>
+</body>

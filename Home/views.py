@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from Home.models import client
 
 # Create your views here.
 def home(request):
@@ -9,3 +10,8 @@ def clients(request):
 
 def about(request):
     return render(request, 'Home/about.html', {'NAV3': True})
+
+def debug(request):
+    client_data = client.objects.all()
+    context = { 'client' : client_data }
+    return render(request, 'Home/debug.html', context)
