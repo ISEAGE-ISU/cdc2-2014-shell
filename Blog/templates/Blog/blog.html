@@ -1,0 +1,19 @@
+{% extends "Home/common.html" %}
+
+{% block title %}Developer Blog{% endblock %}
+
+{% block content %}
+    <div class="jumbotron well" style="background-color: #CC3333; text-align: center;">
+        <h1>Corporate Blog</h1>
+
+    </div>
+    <center>
+        {% for post in post_data %}
+            <div class="post_container" style="background-color:white;">
+                <h1 class="post_title">{{ post.title|safe }}</h1>
+                <p>{{ post.data|safe }}</p>
+                <p>{{ post.date|safe }}</p>
+            </div>
+        {% endfor %}
+        </center>
+{% endblock %}

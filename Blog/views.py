@@ -7,7 +7,7 @@ from Blog.models import Post
 def frontpage(request):
     post_data = Post.objects.all().order_by('-date')
     context = { 'post_data' : post_data , 'NAV4' : True}
-    return render(request, 'Blog/index.html', context)
+    return render(request, 'Blog/blog.html', context)
 
 def single_post(request, post_id):
     try:
